@@ -1,0 +1,18 @@
+﻿@{
+	ViewData["Title"] = "Numbers 1 ... " + ViewData["Count"];
+	int? count = (int?)ViewData["Count"];
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form method="post">
+	<input name="count" value="@ViewData["Count"]" />
+	<button type"submit">Submit</button>
+</form>
+
+<ul>
+	@for (int i = 1; i <= count; i++)
+	{
+		<li>@i</li>
+	}
+</ul>
